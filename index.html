@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>albion-craft-calculator</title>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>albion craft calculator . <em>v1</em></h1>
+    </div>
+    <div id="body">
+      <div id="res-prices">
+        <div class="inputs">
+          <label for="first-res-price">first ressource price</label>
+          <input type="number" name="first" id="first-res-price">
+        </div>
+        <div class="inputs">
+          <label for="second-res-price">second ressource price</label>
+          <input type="number" name="second" id="second-res-price">
+        </div>
+        <div class="inputs">
+          <label for="artefact-price">artefact price</label>
+          <input type="number" name="third" id="artefact-price">
+        </div>
+        <div class="inputs">
+          <label for="sell-price">sell price</label>
+          <input type="number" name="forth" id="sell-price">
+        </div>
+        <div class="inputs">
+          <label for="return-rate">% return rate</label>
+          <input type="number" name="fifth" id="return-rate">
+        </div>
+        <button class="btn" id="button-3">calc</button>
+        <button class="btn" id="button-24">reset</button>
+      </div>
+      <div id="profit">
+        <div id="sell-info" class="craft-info">
+          <p class="push">craft-price : </p>
+          <p id="craft-price"></p>
+          <p class="push">craft price with return : </p>
+          <p id="craft-price-return"></p>
+          <p class="push">amount returned : </p>
+          <p id="ammount-returned"></p>
+          <p class="push">profit : </p>
+          <p id="profit-ui"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
