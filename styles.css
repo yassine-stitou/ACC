@@ -18,7 +18,7 @@ label {
 #container {
   background-color: var(--background-color-container);
   color: var(--text-color);
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -32,8 +32,8 @@ label {
 
 #body {
   width: 80%;
-  height: 600px;
-  margin: 90px auto;
+  min-height: 600px;
+  margin: 90px auto 0;
   display: flex;
   gap: 1.5rem;
 }
@@ -155,4 +155,18 @@ button {
 #button-3:active {
   background-color: #298e46;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+@media screen and (max-width: 992px) {
+  #body {
+    flex-direction: column;
+  }
+
+  #profit {
+    padding-top: 50px;
+  }
+
+  #sell-info {
+    margin-bottom: 80px;
+  }
 }
