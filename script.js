@@ -28,13 +28,21 @@ btn_reset.addEventListener("click", () => {
 })
 
 btn_calc.addEventListener("click", () => {
-  craft_price_no_return.textContent = Number(first_res_price.value) + Number(second_res_price.value) + Number(artefact_price.value)
-  returned_res.textContent = Number(craft_price_no_return.textContent) * Number(return_rate.value) / 100
-  craft_price_return.textContent = Number(craft_price_no_return.textContent) - Number(returned_res.textContent)
-  profit.textContent = Math.round(Number(sell_price.value) - Number(craft_price_return.textContent))
-  if (Number(profit.textContent) > 0) {
+  let craft_price_no_return_1 = Number(first_res_price.value) + Number(second_res_price.value) + Number(artefact_price.value)
+  craft_price_no_return.textContent = (craft_price_no_return_1).toLocaleString("en-US")
+
+  let returned_res_1 = craft_price_no_return_1 * Number(return_rate.value) / 100
+  returned_res.textContent = (returned_res_1).toLocaleString("en-US")
+
+  let craft_price_return_1 = craft_price_no_return_1 - returned_res_1
+  craft_price_return.textContent = (craft_price_return_1).toLocaleString("en-US")
+
+  let profit_1 = Math.round(Number(sell_price.value) - craft_price_return_1)
+  profit.textContent = profit_1.toLocaleString("en-US")
+
+  if (profit_1 > 0) {
     div_sell_info.style.backgroundColor = "#134A18"
-  } else if (Number(profit.textContent) < 0) {
+  } else if (profit_1 < 0) {
     div_sell_info.style.backgroundColor = "#661111"
   } else {
     div_sell_info.style.backgroundColor = "#661111"
