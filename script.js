@@ -31,7 +31,7 @@ btn_calc.addEventListener("click", () => {
   craft_price_no_return.textContent = Number(first_res_price.value) + Number(second_res_price.value) + Number(artefact_price.value)
   returned_res.textContent = Number(craft_price_no_return.textContent) * Number(return_rate.value) / 100
   craft_price_return.textContent = Number(craft_price_no_return.textContent) - Number(returned_res.textContent)
-  profit.textContent = Number(sell_price.value) - Number(craft_price_return.textContent)
+  profit.textContent = Math.round(Number(sell_price.value) - Number(craft_price_return.textContent))
   if (Number(profit.textContent) > 0) {
     div_sell_info.style.backgroundColor = "#134A18"
   } else if (Number(profit.textContent) < 0) {
