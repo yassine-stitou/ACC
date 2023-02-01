@@ -17,24 +17,60 @@
     <div id="body">
       <div id="res-prices">
         <div class="inputs">
-          <label for="first-res-price">first ressource price</label>
-          <input type="number" name="first" id="first-res-price">
+          <select name="weapon-family" id="options">
+            <option value="" selected disabled>please select a weapon family</option>
+            <option value="Swords">Swords</option>
+            <option value="Axes">Axes</option>
+            <option value="Maces">maces</option>
+            <option value="Hammers">hammers</option>
+            <option value="Gloves">gloves</option>
+            <option value="Crossbows">crossbows</option>
+            <option value="Shields">shields</option>
+            <option value="Bows">bows</option>
+            <option value="Spears">spears</option>
+            <option value="Nature Staves">nature staves</option>
+            <option value="Daggers">daggers</option>
+            <option value="Quarterstaves">Quarterstaves</option>
+            <option value="Torches">torches</option>
+            <option value="Fire Staves">fire staves</option>
+            <option value="Holy Staves">holy staves</option>
+            <option value="Arcane Staves">arcane staves</option>
+            <option value="Frost Staves">frost staves</option>
+            <option value="Cursed Staves">cursed staves</option>
+            <option value="Tomes">tomes</option>
+            <option value="Plate Helmet">Plate Helmet</option>
+            <option value="Plate Armor">Plate Armor</option>
+            <option value="Plate Boots">Plate Boots</option>
+            <option value="Leather Hood">Leather Hood</option>
+            <option value="Leather Jacket">Leather Jacket</option>
+            <option value="Leather Shoes">Leather Shoes</option>
+            <option value="Cloth Cowl">Cloth Cowl</option>
+            <option value="Cloth Robe">Cloth Robe</option>
+            <option value="Cloth Sandals">Cloth Sandals</option>
+          </select>
+          <select name="weapon" id="choices">
+            <option value="" disabled selected>please select a weapon</option>
+          </select>
         </div>
         <div class="inputs">
-          <label for="second-res-price">second ressource price</label>
-          <input type="number" name="second" id="second-res-price">
+          <label class="disable_lbl" for="first-res-price">.</label>
+          <input class="disable" type="number" name="first" id="first-res-price" disabled>
         </div>
         <div class="inputs">
-          <label for="artefact-price">artefact price</label>
-          <input type="number" name="third" id="artefact-price">
+          <label class="disable_lbl" for="second-res-price">.</label>
+          <input class="disable" type="number" name="second" id="second-res-price" disabled>
+        </div>
+        <div class="inputs">
+          <label class="disable_lbl" for="artefact-price">.</label>
+          <input class="disable" type="number" name="third" id="artefact-price" disabled>
         </div>
         <div class="inputs">
           <label for="sell-price">sell price</label>
-          <input type="number" name="forth" id="sell-price">
+          <input class="disable" type="number" name="forth" id="sell-price" disabled>
         </div>
         <div class="inputs">
           <label for="return-rate">% return rate</label>
-          <input type="number" name="fifth" id="return-rate">
+          <input class="disable" type="number" name="fifth" id="return-rate" disabled>
         </div>
         <button class="btn" id="button-3">calc</button>
         <button class="btn" id="button-24">reset</button>
